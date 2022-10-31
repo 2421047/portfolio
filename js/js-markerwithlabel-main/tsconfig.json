@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "ESNext"],
+    "target": "ES6",
+    "moduleResolution": "node",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "./dist"]
+}
