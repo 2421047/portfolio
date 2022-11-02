@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/works_style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+
+
+    <script>$(document).on('ready',function(){
+        $('.slider-for').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: false,
+            asNavFor: '.slider-nav'
+          });
+          $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            asNavFor: '.slider-for',
+            centerMode: true,
+            dots: true,
+            focusOnSelect: true
+          });
+        });
+    </script>
+    
+    <!-- フェードイン -->
+    <script>
+    $(function(){
+        $(window).on('load scroll',function (){
+            $('.animation').each(function(){
+                //ターゲットの位置を取得
+                var target = $(this).offset().top;
+                //スクロール量を取得
+                var scroll = $(window).scrollTop();
+                //ウィンドウの高さを取得
+                var height = $(window).height();
+                //ターゲットまでスクロールするとフェードインする
+                if (scroll > target - height){
+                    //クラスを付与
+                    $(this).addClass('active');
+                }
+            });
+        });
+    });
+    </script>
+
+    <script>
+        jQuery(function($){
+        $('.menu').on('click',function(){
+        $('.menu__line').toggleClass('active');
+        $('.gnav').fadeToggle();
+        });
+        });
+    </script>
+    
+    <title>写真集「山手旅行」</title>
+</head>
+<body class="drawer drawer--right">
+    
+    <a class="menu">
+        <span class="menu__line menu__line--top"></span>
+        <span class="menu__line menu__line--center"></span>
+        <span class="menu__line menu__line--bottom"></span>
+        </a>
+        <nav class="gnav">
+        <div class="gnav__wrap">
+        <ul class="gnav__menu">
+        <li class="gnav__menu__item header_menu"><a href="../html/about.html">ABOUT</a></li>
+
+        <li class="gnav__menu__item header_menu works_icon"><a href="../html/works.html">WORKS</a></li>
+
+        <li class="gnav__menu__item sns_icon">
+            <a href="https://www.instagram.com/" target="_blank">
+            <img src="../images/instagram.png" alt="サイトロゴ">
+        </a>
+        </li>
+
+        <li class="gnav__menu__item sns_icon">
+            <a href="https://twitter.com/" target="_blank">
+                <img src="../images/twitter.png" alt="サイトロゴ">
+            </a>
+        </li>
+
+        <li class="gnav__menu__item sns_icon">
+             <a href="https://www.youtube.com/" target="_blank">
+                <img src="../images/youtube.png" alt="サイトロゴ">
+            </a>
+        </li>
+
+        
+        </ul>
+        </div>
+        </nav>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_logo">
+                <a href="../index.html">
+                    <img src="../images/site_logo.png" alt="サイトロゴ">
+                </a>
+            </div>
+
+            <nav class="header_nav">
+                <ul class="header_list">
+                        <li class="header_menu"><a href="about.html">ABOUT</a></li>
+                        <li class="header_menu works_icon current-page"><a href="works.html">WORKS</a></li>
+                </ul>
+            </nav>
+
+            <div class="sns">
+                <div class="sns_icon">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../images/instagram.png" alt="サイトロゴ">
+                    </a>
+                </div>
+
+                <div class="sns_icon">
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="../images/twitter.png" alt="サイトロゴ">
+                    </a>
+                </div>
+
+                <div class="sns_icon">
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="../images/youtube.png" alt="サイトロゴ">
+                    </a>
+                </div>
+            </div>
+            <a href="../html/about.html#contact"><p class="header_contact">CONTACT</p></a>
+
+        </header>
+        <main class="works_main animation">
+            <div class="works_title_list">
+                <h2 class="works_title_category">写真集</h2>
+                <h3 class="works_title_name">写真集「山手旅行」</h3>
+            </div>
+
+            <div class="sliderArea animation">
+                <div class="slider-for yamanote">
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte1.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte2.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte3.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte4.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte5.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte6.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte7.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte8.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte9.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte10.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte11.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte12.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte13.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte14.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte15.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte16.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte17.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte18.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte19.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte20.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte21.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte22.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte23.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte24.jpg" alt=""></div>
+                </div>
+                
+                <div class="slider-nav">
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte1.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte2.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte3.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte4.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte5.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte6.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte7.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte8.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte9.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte10.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte11.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte12.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte13.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte14.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte15.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte16.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte17.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte18.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte19.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte20.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte21.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte22.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte23.jpg" alt=""></div>
+                    <div class="works_slide"><img src="../images/yamanote/yamaonte24.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="works_title_list">
+                <h2 class="works_concept animation">コンセプト</h2>
+                <h3 class="works_concept_text animation">写真集の制作として山手線の各駅の特徴や観光地を切り取って写真を撮影しました。山手線は東京の中心部をぐるっと一周路線と違うため、東京の観光をしたい人が見たときに行ってみたいと思えるようなものを作りました。</h3>
+            </div>
+            
+
+            <div class="works_title_list animation">
+                <h2 class="works_concept_sub">使用ソフト</h2>
+            </div>
+
+            <ul class="works_skill_list animation">
+                <li class="works_skill">
+                    <img src="../images/ai.png" alt="">
+                </li>
+                <li class="works_skill">
+                    <img src="../images/ps.png" alt="">
+                </li>
+                <li class="works_skill">
+                    <img src="../images/lr.png" alt="">
+                </li>
+                <li class="works_skill">
+                    <img src="../images/id.png" alt="">
+                </li>
+            </ul>
+        </div>
+
+        </main>
+    </div>
+</body>
+</html>

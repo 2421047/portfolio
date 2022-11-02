@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- フェードイン -->
+    <script>
+    $(function(){
+        $(window).on('load scroll',function (){
+            $('.animation').each(function(){
+                //ターゲットの位置を取得
+                var target = $(this).offset().top;
+                //スクロール量を取得
+                var scroll = $(window).scrollTop();
+                //ウィンドウの高さを取得
+                var height = $(window).height();
+                //ターゲットまでスクロールするとフェードインする
+                if (scroll > target - height){
+                    //クラスを付与
+                    $(this).addClass('active');
+                }
+            });
+        });
+    });
+    </script>
+
+    <script>
+        jQuery(function($){
+        $('.menu').on('click',function(){
+        $('.menu__line').toggleClass('active');
+        $('.gnav').fadeToggle();
+        });
+        });
+    </script>
+
+    <title>ポートフォリオ｜ABOUT</title>
+</head>
+<body class="drawer drawer--right">
+    
+    <a class="menu">
+        <span class="menu__line menu__line--top"></span>
+        <span class="menu__line menu__line--center"></span>
+        <span class="menu__line menu__line--bottom"></span>
+        </a>
+        <nav class="gnav">
+        <div class="gnav__wrap">
+        <ul class="gnav__menu">
+        <li class="gnav__menu__item header_menu"><a href="../html/about.html">ABOUT</a></li>
+
+        <li class="gnav__menu__item header_menu works_icon"><a href="../html/works.html">WORKS</a></li>
+
+        <li class="gnav__menu__item sns_icon">
+            <a href="https://www.instagram.com/" target="_blank">
+            <img src="../images/instagram.png" alt="サイトロゴ">
+        </a>
+        </li>
+
+        <li class="gnav__menu__item sns_icon">
+            <a href="https://twitter.com/" target="_blank">
+                <img src="../images/twitter.png" alt="サイトロゴ">
+            </a>
+        </li>
+
+        <li class="gnav__menu__item sns_icon">
+             <a href="https://www.youtube.com/" target="_blank">
+                <img src="../images/youtube.png" alt="サイトロゴ">
+            </a>
+        </li>
+
+        
+        </ul>
+        </div>
+        </nav>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_logo">
+                <a href="../index.html">
+                    <img src="../images/site_logo.png" alt="サイトロゴ">
+                </a>
+            </div>
+            <nav class="header_nav">
+                <ul class="header_list">
+                        <li class="header_menu current-aboutpage"><a href="about.html">ABOUT</a></li>
+                        <li class="header_menu works_icon"><a href="works.html">WORKS</a></li>
+                </ul>
+            </nav>
+            <div class="sns">
+                <div class="sns_icon">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../images/instagram.png" alt="サイトロゴ">
+                    </a>
+                </div>
+                <div class="sns_icon">
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="../images/twitter.png" alt="サイトロゴ">
+                    </a>
+                </div>
+                <div class="sns_icon">
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="../images/youtube.png" alt="サイトロゴ">
+                    </a>
+                </div>
+            </div>
+            <a href="../html/about.html#contact"><p class="header_contact">CONTACT</p></a>
+
+        </header>
+        <main class="about_main animation">
+            <h1 class="about_title">ABOUT</h1>
+            <div class="profile">
+                <div class="profile_img">
+                    <img src="../images/profile.png" alt="プロフィール画面">
+                </div>
+                <div class="profile_txt">
+                    <h2>PROFILE</h2>
+                    <p class="profile_txt_p name">氏名：黒岩望夢（くろいわのぞむ）</p>
+                    <p class="profile_txt_p name">出身地：熊本</p>
+                    <p class="profile_txt_p name">誕生日：1999年10月22日</p>
+                    <p class="profile_txt_p profile_word">東京デザイン専門学校のグラフィックデザイン科に所属している黒岩望夢です。
+                        WEB デザインを専攻しています。
+                        趣味は写真をとることで、風景やポートレートなどを撮影しています。
+                        人に喜んでもらうことがとても好きなので、自分の作ったもので感動を与えたり、
+                        すごいと思ってもらえるように心がけて制作しています。
+                    </p>
+                </div>
+            </div>
+            <div class="profile_skill">
+                <h2 class="animation">Design Skill</h2>
+                <p class="contact_text animation">illustratorやPhotoshopでのデザイン制作や、VScodeを使いコーディングが可能です。</p>
+                <ul class="profile_skill_list animation">
+                    <li class="skill">
+                        <img src="../images/ai.png" alt="">
+                    </li>
+                    <li class="skill">
+                        <img src="../images/ps.png" alt="">
+                    </li>
+                    <li class="skill">
+                        <img src="../images/lr.png" alt="">
+                    </li>
+                    <li class="skill">
+                        <img src="../images/id.png" alt="">
+                    </li>
+                    <li class="skill">
+                        <img src="../images/vs.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="profile_skill">
+                <h2 class="animation">Web Skill</h2>
+                <p class="contact_text animation">WEB制作ではHTMLやCSSのほか、Javascript・WordPressの制作ができます。</p>
+                <ul class="profile_skill_list animation">
+                    <li class="skill ">
+                        <img src="../images/html.png" alt="">
+                    </li>
+                    <li class="skill">
+                        <img src="../images/css.png" alt="">
+                    </li>
+                    <li class="skill">
+                        <img src="../images/js.png" alt="">
+                    </li>
+                    <li class="skill">
+                        <img src="../images/wordpress.png" alt="">
+                    </li>
+               </ul>
+            </div>
+            <div id="contact" class="profile_contact">
+                <h2 class="animation">Contact</h2>
+                <p class="contact_text animation">お問い合わせは、SNSかメールでも可能です。</p>
+                <ul class="profile_contact_list animation">
+                    <li class="contact_sns ">
+                        <a href="https://twitter.com" target="_blank"><img src="../images/contact_twitter.png" alt=""></a>
+                    </li>
+                    <li class="contact_sns">
+                        <a href="https://instagram.com" target="_blank"><img src="../images/contact_instagram.png" alt=""></a>
+                    </li>
+                    <li class="contact_sns">
+                        <a href="mailto:address" target="_blank"><img src="../images/contact_mail.png" alt=""></a>
+                    </li>
+               </ul>
+                <div class="Form animation">
+                <div class="Form-Item">
+                  <p class="Form-Item-Label">
+                    <span class="Form-Item-Label-Required">必須</span>会社名
+                  </p>
+                  <input type="text" class="Form-Item-Input" placeholder="例）株式会社令和">
+                </div>
+                <div class="Form-Item">
+                  <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+                  <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
+                </div>
+                <div class="Form-Item">
+                  <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+                  <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+                </div>
+                <div class="Form-Item">
+                  <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                  <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+                </div>
+                <div class="Form-Item">
+                  <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+                  <textarea class="Form-Item-Textarea"></textarea>
+                </div>
+                    <input type="submit" class="Form-Btn" value="送信する">
+                 </div>
+                 </div>
+            <div class="address_wrap">
+                <p class="contact_text address animation">東京デザイン専門学校</p>
+                <p class="contact_text address animation">〒151-0051 東京都渋谷区千駄ケ谷３丁目６２−８</p>
+            </div>
+            <div class="map-wrap animation">
+                <div id="map" class="map"></div>
+            </div>
+            </div>
+        </main>
+        <!-- "YOUR_API_KEY" の部分に、作成したAPIキーを貼り付ける -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIuNaQW6SW_t86iAddZomvEGhCYimS0Uc&callback=initMap" async defer></script>
+
+        <!-- 👇このjsファイル内にAPIを使用した記述を書く（後述） -->
+        <script src="../js/googlemap.js"></script>
+    
+</body>
+</html>
