@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- jquery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+
+    <!-- ソート機能 -->
+    <script type="text/javascript">
+        $(function(){
+        $('#gallery').mixItUp();
+        });
+    </script>
+
+    <!-- フェードイン -->
+    <script>
+    $(function(){
+        $(window).on('load scroll',function (){
+            $('.animation').each(function(){
+                //ターゲットの位置を取得
+                var target = $(this).offset().top;
+                //スクロール量を取得
+                var scroll = $(window).scrollTop();
+                //ウィンドウの高さを取得
+                var height = $(window).height();
+                //ターゲットまでスクロールするとフェードインする
+                if (scroll > target - height){
+                    //クラスを付与
+                    $(this).addClass('active');
+                }
+            });
+        });
+    });
+    </script>
+
+    <title>ポートフォリオ｜WORKS</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_logo">
+                <a href="../index.html">
+                    <img src="../images/site_logo.png" alt="サイトロゴ">
+                </a>
+            </div>
+
+            <nav class="header_nav">
+                <ul class="header_list">
+                        <li class="header_menu"><a href="about.html">ABOUT</a></li>
+                        <li class="header_menu works_icon current-page"><a href="works.html">WORKS</a></li>
+                </ul>
+            </nav>
+
+            <div class="sns">
+                <div class="sns_icon">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../images/instagram.png" alt="サイトロゴ">
+                    </a>
+                </div>
+
+                <div class="sns_icon">
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="../images/twitter.png" alt="サイトロゴ">
+                    </a>
+                </div>
+
+                <div class="sns_icon">
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="../images/youtube.png" alt="サイトロゴ">
+                    </a>
+                </div>
+            </div>
+            <a href="../html/about.html#contact"><p class="header_contact">CONTACT</p></a>
+
+        </header>
+        <main class="works_main animation">
+            <h1 class="works_title">WORKS</h1>
+            <!-- worksメニュー -->
+            <div class="works_category_wrap">
+                <ul class="works_category">
+                    <li><a href="#" class="filter" data-filter="all"><p>ALL</p></a></li>
+                    <li><a href="#" class="filter" data-filter=".web"><p>WEB</p></a></li>
+                    <li><a href="#" class="filter" data-filter=".photo"><p>PHOTO</p></a></li>
+                    <li><a href="#" class="filter" data-filter=".promotion"><p>PROMO</p></a></li>
+                </ul>
+            </div>
+            <!-- worksリスト -->
+            <ul id="gallery" class="works_list">
+                <li class="works_menu mix photo">
+                    <div class="works_hover">
+                    <a href="2in1.html"><img src="../images/works_1.png" alt=""></a>
+                    <h3>2in1</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix promotion">
+                    <div class="works_hover">
+                    <a href="cafedm.html"><img src="../images/works_2.png" alt=""></a>
+                    <h3>MELT COFFEE</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix promotion">
+                    <div class="works_hover">
+                    <a href="kutusita.html"><img src="../images/works_3.png" alt=""></a>
+                    <h3>無印良品 足にフィットする靴下 パッケージ</h3>
+                </li>
+
+                <li class="works_menu mix photo">
+                    <div class="works_hover">
+                    <a href="postcard.html"><img src="../images/works_4.png" alt=""></a>
+                    <h3>2022年ポストカード</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix photo promotion">
+                    <div class="works_hover">
+                    <a href="poster.html"><img src="../images/works_5.png" alt=""></a>
+                    <h3>三ツ矢サイダー ポスター広告</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix promotion">
+                    <div class="works_hover">
+                    <a href="sarasa.html"><img src="../images/works_6.png" alt=""></a>
+                    <h3>SARASA カタログ</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix photo promotion">
+                    <div class="works_hover">
+                    <a href="vino.html"><img src="../images/works_7.png" alt=""></a>
+                    <h3>YAMAHA vino リアルイラスト</h3>
+                </li>
+
+                <li class="works_menu mix promotion">
+                    <div class="works_hover">
+                    <a href="positive.html"><img src="../images/works_8.png" alt=""></a>
+                    <h3>Positive フリーペーパー</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix web promotion">
+                    <div class="works_hover">
+                    <a href="itookasi.html"><img src="../images/works_9.png" alt=""></a>
+                    <h3>いとおかし ECサイト</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix photo promotion">
+                    <div class="works_hover">
+                    <a href="koara.html"><img src="../images/works_10.png" alt=""></a>
+                    <h3>コアラのマーチ パッケージ</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix photo">
+                    <div class="works_hover">
+                    <a href="yamanote.html"><img src="../images/works_12.png" alt=""></a>
+                    <h3>写真集「山手旅行」</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix web">
+                    <div class="works_hover">
+                    <a href="asdf.html"><img src="../images/works_11.png" alt=""></a>
+                    <h3>デザイン会社サイト</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix photo promotion">
+                    <div class="works_hover">
+                    <a href="zassitokusyu.html"><img src="../images/works_13.png" alt=""></a>
+                    <h3>雑誌特集ページ制作</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix promotion">
+                    <div class="works_hover">
+                    <a href="koutuu.html"><img src="../images/works_14.png" alt=""></a>
+                    <h3>交通メディア広告</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix promotion">
+                    <div class="works_hover">
+                    <a href="paypay.html"><img src="../images/works_15.png" alt=""></a>
+                    <h3>PayPay 雑誌広告制作</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix photo promotion">
+                    <div class="works_hover">
+                    <a href="look.html"><img src="../images/works_16.png" alt=""></a>
+                    <h3>ルックアラモード 新聞広告</h3>
+                    </div>
+                </li>
+
+                <li class="works_menu mix photo">
+                    <div class="works_hover">
+                    <a href="movie.html"><img src="../images/works_17.png" alt=""></a>
+                    <h3>オリジナル映像</h3>
+                    </div>
+                </li>
+
+                <!-- space betweenでキレイに表示するための空 -->
+                <li class="works_menu mix promotion web photo">
+                    <a href="#"><img src="#" alt=""></a>
+                </li>
+
+                <li class="works_menu mix promotion web photo">
+                    <a href="#"><img src="#" alt=""></a>
+                </li>
+
+                <li class="works_menu mix promotion web photo">
+                    <a href="#"><img src="#" alt=""></a>
+                </li>
+
+                <li class="works_menu mix promotion web photo">
+                    <a href="#"><img src="#" alt=""></a>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
